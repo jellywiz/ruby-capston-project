@@ -5,9 +5,9 @@
 
 # 📗 Table of Contents
 
-- [Ruby-Capston-Project](#ruby-capston-project)
+- [ruby-capston-project](#ruby-capston-project)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Ruby-Template ](#-ruby-template-)
+- [📖 Ruby-Capston-Project ](#-ruby-capston-project-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -100,6 +100,7 @@ ruby main.rb
 
 - GitHub: [@dialite](https://github.com/dialite)
 - LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa/)
+- - Twitter: [@raymondolisa01](https://twitter.com/raymondolisa01)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

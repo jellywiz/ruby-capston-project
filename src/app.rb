@@ -43,7 +43,7 @@ class App
       if option
         send(option)
       else
-        puts 'That is not a valid input'
+        puts 'That is an invalid input'
       end
     end
   end
