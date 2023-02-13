@@ -1,5 +1,4 @@
 class App
-
   ACTIONS = {
     1 => :list_books,
     2 => :list_music_albums,
