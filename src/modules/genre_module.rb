@@ -1,4 +1,4 @@
-require_relative '../classes/genre.rb'
+require_relative '../classes/genre'
 
 module GenreModule
   def list_all_genres
@@ -29,7 +29,7 @@ module GenreModule
 
   def add_genre
     if @genres.empty?
-      puts "Add a genre for this item!"
+      puts 'Add a genre for this item!'
       create_genre
     else
       puts "\nSelect a genre for this item or add a new one: "
@@ -44,7 +44,7 @@ module GenreModule
       when 2
         create_genre
       else
-        puts "Please enter 1 or 2!"
+        puts 'Please enter 1 or 2!'
       end
     end
   end

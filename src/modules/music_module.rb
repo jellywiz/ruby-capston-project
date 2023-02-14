@@ -1,6 +1,6 @@
-require_relative '../classes/music_album.rb'
-require_relative '../classes/genre.rb'
-require_relative './genre_module.rb'
+require_relative '../classes/music_album'
+require_relative '../classes/genre'
+require_relative './genre_module'
 
 module MusicModule
   include GenreModule
@@ -27,9 +27,9 @@ module MusicModule
       @music_albums.each_with_index do |album, index|
         print "#{index + 1}. Published date : #{album.publish_date}, "
         if album.on_spotify
-          puts "Available on spotify." 
+          puts 'Available on spotify.'
         else
-          puts "Not available on spotify."
+          puts 'Not available on spotify.'
         end
       end
     end

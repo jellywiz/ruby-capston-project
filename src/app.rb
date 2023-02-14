@@ -1,5 +1,5 @@
-require_relative './modules/music_module.rb'
-require_relative './modules/genre_module.rb'
+require_relative './modules/music_module'
+require_relative './modules/genre_module'
 
 class App
   include MusicModule
