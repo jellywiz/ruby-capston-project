@@ -1,10 +1,19 @@
+require_relative './modules/music_module'
+require_relative './modules/genre_module'
+
 class App
+  include MusicModule
+  include GenreModule
+  def initialize
+    @music_albums = []
+    @genres = []
+  end
   ACTIONS = {
     1 => :list_books,
-    2 => :list_music_albums,
+    2 => :list_all_music_albums,
     3 => :list_movies,
     4 => :list_games,
-    5 => :list_genres,
+    5 => :list_all_genres,
     6 => :list_labels,
     7 => :list_authors,
     8 => :list_sources,
