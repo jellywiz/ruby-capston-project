@@ -1,4 +1,10 @@
+require_relative './modules/music_module.rb'
+
 class App
+  include MusicModule
+  def initialize
+    @music_albums = []
+  end
   ACTIONS = {
     1 => :list_books,
     2 => :list_music_albums,
