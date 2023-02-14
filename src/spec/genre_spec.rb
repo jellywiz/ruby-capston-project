@@ -1,5 +1,5 @@
-require_relative '../classes/genre.rb'
-require_relative '../item.rb'
+require_relative '../classes/genre'
+require_relative '../item'
 
 describe Genre do
   before :each do
@@ -10,11 +10,11 @@ describe Genre do
     expect(@genre).to be_an_instance_of Genre
   end
 
-  it "Genre items list should be empty" do
+  it 'Genre items list should be empty' do
     expect(@genre.items.length).to eql 0
   end
 
-  it "Genre items list should have one item" do
+  it 'Genre items list should have one item' do
     @genre.add_item(Item.new('2023-02-01'))
     expect(@genre.items.length).to eql 1
   end
