@@ -1,4 +1,4 @@
-require_relative '../Classes/label'
+require_relative '../classes/label'
 
 describe Label do
   label = Label.new('Label 1', 'red')
