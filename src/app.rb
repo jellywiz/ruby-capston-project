@@ -1,21 +1,27 @@
 require_relative './modules/music_module'
 require_relative './modules/genre_module'
+require_relative './modules/game_module'
+require_relative './modules/author_module'
 
 class App
   include MusicModule
   include GenreModule
+  include GameModule
+  include AuthorModule
   def initialize
     @music_albums = []
     @genres = []
+    @games = []
+    @authors = []
   end
   ACTIONS = {
     1 => :list_books,
     2 => :list_all_music_albums,
     3 => :list_movies,
-    4 => :list_games,
+    4 => :list_all_games,
     5 => :list_all_genres,
     6 => :list_labels,
-    7 => :list_authors,
+    7 => :list_all_authors,
     8 => :list_sources,
     9 => :add_a_book,
     10 => :add_a_music_album,
