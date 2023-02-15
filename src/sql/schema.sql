@@ -31,7 +31,7 @@ CREATE TABLE games (
 -- Create Authors Table
 CREATE TABLE authors (
   id  INT GENERATED ALWAYS AS IDENTITY,
-  first_name VARCHAR(100),
-  last_name VARCHAR(100),
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   PRIMARY KEY(id)
 );
