@@ -17,7 +17,7 @@ module MusicModule
     genre = add_genre
     genre.add_item(music_album)
 
-    puts "Album of #{genre.name} genre added successfully!"
+    puts "Album of genre '#{genre.name}' and publish date '#{published_date}' added successfully!"
   end
 
   def list_all_music_albums
@@ -25,7 +25,7 @@ module MusicModule
       puts 'No album added!'
     else
       @music_albums.each_with_index do |album, index|
-        print "#{index + 1}. Published date : #{album.publish_date}, Genre : #{album.genre.name}, "
+        print "[ Album #{index + 1} ]. Published date : #{album.publish_date}, Genre : #{album.genre.name}, "
         if album.on_spotify
           puts 'Available on spotify.'
         else
