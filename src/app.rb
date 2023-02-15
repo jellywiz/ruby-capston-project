@@ -2,6 +2,7 @@ require_relative './modules/music_module'
 require_relative './modules/genre_module'
 require_relative './modules/game_module'
 require_relative './modules/author_module'
+require_relative './modules/book_module'
 
 class App
   include MusicModule
@@ -13,6 +14,8 @@ class App
     @genres = []
     @games = []
     @authors = []
+    @labels = []
+    @books = []
   end
   ACTIONS = {
     1 => :list_books,
