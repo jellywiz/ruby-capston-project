@@ -2,6 +2,8 @@ require_relative './modules/music_module'
 require_relative './modules/genre_module'
 require_relative './modules/game_module'
 require_relative './modules/author_module'
+require_relative './modules/book_module'
+
 require_relative './storage'
 
 class App
@@ -9,11 +11,14 @@ class App
   include GenreModule
   include GameModule
   include AuthorModule
+  include BookModule
   def initialize
-    @music_albums = Storage.load_data('music_albums')
-    @genres = Storage.load_data('genres')
     @games = []
     @authors = []
+    @labels = []
+    @books = []
+    @music_albums = Storage.load_data('music_albums')
+    @genres = Storage.load_data('genres')
   end
   ACTIONS = {
     1 => :list_books,
