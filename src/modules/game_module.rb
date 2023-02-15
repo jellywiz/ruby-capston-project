@@ -1,4 +1,6 @@
 require_relative '../classes/game'
+require_relative '../classes/author'
+require_relative './author_module'
 module GameModule
   def list_all_games
     puts 'Music Albums: '
@@ -11,18 +13,23 @@ module GameModule
       end
     end
   end
-  
+
   def add_a_game
-    puts 'Please write multiplayer: '
-      multiplayer = gets.chomp
-  
-      puts 'Please write date of publish [Enter date in format (yyyy-mm-dd)]'
-      publish_date = gets.chomp
-  
-      puts 'Please write last played date [Enter date in format (yyyy-mm-dd)]'
-      last_played_date = gets.chomp
-  
-      @games.push(Game.new(publish_date, multiplayer, last_played_date))
-      puts 'Game is created'
+    puts 'Please type the word multiplayer: '
+    multiplayer = gets.chomp
+
+    puts 'Please write publish date for game [Enter date in format (yyyy-mm-dd)]'
+    publish_date = gets.chomp
+
+    puts 'Please write last played date [Enter date in format (yyyy-mm-dd)]'
+    last_played_date = gets.chomp
+
+    game = Game.new(publish_date, multiplayer, last_played_date)
+
+    @games.push(game)
+    author = add_author
+    author.add_item(game)
+
+    puts "Game created with #{author.first_name} author added successfully!"
   end
 end
