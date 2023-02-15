@@ -1,3 +1,5 @@
+# rubocop:enable Metrics/CyclomaticComplexity
+
 require_relative './modules/music_module'
 require_relative './modules/genre_module'
 require_relative './modules/game_module'
@@ -66,3 +68,4 @@ class App
     end
   end
 end
+# rubocop:enable Metrics/CyclomaticComplexity

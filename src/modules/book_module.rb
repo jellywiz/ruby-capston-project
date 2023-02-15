@@ -10,7 +10,11 @@ module BookModule
       puts 'There are no books in the catalog'
     else
       @books.each do |book|
-        puts "Publisher: #{book.publisher}, Publication Date: #{book.publish_date}, Author: #{book.author}, Genre: #{book.genre}, Label: #{book.label}"
+        puts "Publisher: #{book.publisher},
+              Publication Date: #{book.publish_date},
+              Author: #{book.author},
+              Genre: #{book.genre},
+              Label: #{book.label.title}"
       end
     end
   end
@@ -26,9 +30,18 @@ module BookModule
     puts 'Enter the author of the book'
     author = gets.chomp
     puts 'Enter the label of the book'
-    label = gets.chomp
+    label_title = gets.chomp
     puts 'Enter the genre of the book'
     genre = gets.chomp
-    @books << Book.new(publication_date, publisher, cover_state)
+    new_book = Book.new(publication_date, publisher, cover_state)
+    @books << new_book
+    unless @labels.any? { |label| label.title == label_title }
+      new_label = Label.new(label_title)
+      @labels << new_label
+      new_book.add_label(new_label)
+    else
+      old_label = @labels.select { |label| label.title == label_title }
+      new_book.add_label(old_label.first)
+    end
   end
 end
