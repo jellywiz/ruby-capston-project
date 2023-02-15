@@ -13,8 +13,8 @@ class App
   include AuthorModule
   include BookModule
   def initialize
-    @games = []
-    @authors = []
+    @games = Storage.load_data('games')
+    @authors = Storage.load_data('authors')
     @labels = []
     @books = []
     @music_albums = Storage.load_data('music_albums')
@@ -63,6 +63,8 @@ class App
         puts 'Thank you for using the app!'
         Storage.save_data('music_albums', @music_albums) unless @music_albums.empty?
         Storage.save_data('genres', @genres) unless @genres.empty?
+        Storage.save_data('games', @games) unless @games.empty?
+        Storage.save_data('authors', @authors) unless @authors.empty?
         break
       end
 

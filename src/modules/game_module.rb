@@ -8,15 +8,14 @@ module GameModule
       puts "\nNo added games yet. Please add some games . . . "
     else
       @games.each_with_index do |game, index|
-        puts "#{index + 1}) Multiplayer: #{game.multiplayer}, Publish Date: #{game.publish_date},
-        Last played date: #{game.last_played_at}"
+        puts "[Game #{index + 1}]. Multiplayer : #{game.multiplayer}, Publish Date : #{game.publish_date}, Last Played Date : #{game.last_played_at}"
       end
     end
   end
 
   def add_a_game
-    puts 'Please type the word multiplayer: '
-    multiplayer = gets.chomp
+    puts "Please type the word 'multiplayer': "
+    multiplayer = gets.chomp == "multiplayer"
 
     puts 'Please write publish date for game [Enter date in format (yyyy-mm-dd)]'
     publish_date = gets.chomp
