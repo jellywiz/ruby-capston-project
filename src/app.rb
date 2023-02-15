@@ -3,7 +3,8 @@ require_relative './modules/genre_module'
 require_relative './modules/game_module'
 require_relative './modules/author_module'
 require_relative './modules/book_module'
-require_relative './storage.rb'
+
+require_relative './storage'
 
 class App
   include MusicModule
@@ -16,8 +17,6 @@ class App
     @authors = []
     @labels = []
     @books = []
-    @music_albums = Storage.load_data('music_albums')
-    @genres = Storage.load_data('genres')
     @music_albums = Storage.load_data('music_albums')
     @genres = Storage.load_data('genres')
   end
@@ -61,7 +60,7 @@ class App
       option = gets.chomp.to_i
       option = ACTIONS[option]
       if option == :exit
-        puts "Thank you for using the app!"
+        puts 'Thank you for using the app!'
         Storage.save_data('music_albums', @music_albums) unless @music_albums.empty?
         Storage.save_data('genres', @genres) unless @genres.empty?
         break

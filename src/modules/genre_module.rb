@@ -20,7 +20,7 @@ module GenreModule
   end
 
   def create_genre
-    print "Enter the name of the genre: "
+    print 'Enter the name of the genre: '
     name = gets.chomp
     genre = Genre.new(name)
     @genres << genre

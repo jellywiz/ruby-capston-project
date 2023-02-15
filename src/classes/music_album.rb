@@ -1,5 +1,5 @@
 require_relative '../item'
-require_relative './genre.rb'
+require_relative './genre'
 require 'json'
 
 class MusicAlbum < Item
