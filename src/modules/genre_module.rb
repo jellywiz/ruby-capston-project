@@ -3,7 +3,7 @@ require_relative '../classes/genre'
 module GenreModule
   def list_all_genres
     if @genres.empty?
-      puts "\nNo added genres. Add some genres . . . "
+      puts "\nNo added genres!"
     else
       puts "\nExisting genres in the list:"
       @genres.each_with_index do |genre, index|
@@ -20,7 +20,7 @@ module GenreModule
   end
 
   def create_genre
-    print 'Enter the name of the genre: '
+    print "Enter the name of the genre: "
     name = gets.chomp
     genre = Genre.new(name)
     @genres << genre
@@ -29,7 +29,7 @@ module GenreModule
 
   def add_genre
     if @genres.empty?
-      puts 'Add a genre for this item!'
+      puts "\nAdd a genre for this item!"
       create_genre
     else
       puts "\nSelect a genre for this item or add a new one: "
