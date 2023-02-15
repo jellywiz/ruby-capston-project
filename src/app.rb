@@ -9,6 +9,7 @@ class App
   include GenreModule
   include GameModule
   include AuthorModule
+  include BookModule
   def initialize
     @music_albums = []
     @genres = []
