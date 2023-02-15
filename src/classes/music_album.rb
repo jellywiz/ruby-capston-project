@@ -1,4 +1,5 @@
 require_relative '../item'
+require_relative './genre.rb'
 require 'json'
 
 class MusicAlbum < Item
@@ -18,10 +19,14 @@ class MusicAlbum < Item
       JSON.create_id => self.class.name,
       'on_spotify' => @on_spotify,
       'publish_date' => @publish_date,
+      'genre' => @genre
     }.to_json(*args)
   end
 
   def self.json_create(object)
-    new(object['on_spotify'], object['publish_date'])
+    music_album = new(object['on_spotify'], object['publish_date'])
+    genre = JSON.parse(JSON.generate(object['genre']), create_additions: true)
+    genre.add_item(music_album)
+    music_album
   end
 end

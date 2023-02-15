@@ -25,7 +25,7 @@ module MusicModule
       puts 'No album added!'
     else
       @music_albums.each_with_index do |album, index|
-        print "#{index + 1}. Published date : #{album.publish_date}, "
+        print "#{index + 1}. Published date : #{album.publish_date}, Genre : #{album.genre.name}, "
         if album.on_spotify
           puts 'Available on spotify.'
         else
