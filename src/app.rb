@@ -18,6 +18,8 @@ class App
     @books = []
     @music_albums = Storage.load_data('music_albums')
     @genres = Storage.load_data('genres')
+    @music_albums = Storage.load_data('music_albums')
+    @genres = Storage.load_data('genres')
   end
   ACTIONS = {
     1 => :list_books,
