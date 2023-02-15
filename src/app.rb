@@ -3,7 +3,6 @@ require_relative './modules/genre_module'
 require_relative './modules/game_module'
 require_relative './modules/author_module'
 require_relative './modules/book_module'
-
 require_relative './storage'
 
 class App
