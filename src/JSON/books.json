@@ -1,1 +1,1 @@
-[{"json_class":"Book","publish_date":"2222","publisher":"w","cover_state":"w"}]
+[{"json_class":"Book","publish_date":"2222","publisher":"","cover_state":"q"},{"json_class":"Book","publish_date":"222","publisher":"22","cover_state":"eee"},{"json_class":"Book","publish_date":"222","publisher":"w","cover_state":"w"}]

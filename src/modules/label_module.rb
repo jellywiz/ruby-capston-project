@@ -6,8 +6,8 @@ module LabelModule
     if @labels.empty?
       puts 'There are no labels in the catalog'
     else
-      @labels.each do |label|
-        puts "ID: #{label.id} Title: #{label.title}, Color: #{label.color}"
+      @labels.each_with_index do |label, index|
+        puts "[Label #{index + 1}]. Title: #{label.title}, Color: #{label.color}"
       end
     end
   end

@@ -24,6 +24,9 @@ class Label
   end
 
   def self.json_create(object)
-    new(object['title'], object['color'])
+    label = new(object['title'], object['color'])
+    label.id = object['id']
+    label.items = object['items']
+    label
   end
 end

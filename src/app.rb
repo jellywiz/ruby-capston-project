@@ -13,12 +13,12 @@ class App
   include AuthorModule
   include BookModule
   def initialize
-    @games = Storage.load_data('games')
-    @authors = Storage.load_data('authors')
-    @labels = Storage.load_data('labels')
-    @books = Storage.load_data('books')
-    @music_albums = Storage.load_data('music_albums')
-    @genres = Storage.load_data('genres')
+    @games = Storage.load_data('games').empty? ? [] : Storage.load_data('games')
+    @authors = Storage.load_data('authors').empty? ? [] : Storage.load_data('authors')
+    @labels = Storage.load_data('labels').empty? ? [] : Storage.load_data('labels')
+    @books = Storage.load_data('books').empty? ? [] : Storage.load_data('books')
+    @music_albums = Storage.load_data('music_albums').empty? ? [] : Storage.load_data('music_albums')
+    @genres = Storage.load_data('genres').empty? ? [] : Storage.load_data('genres')
   end
   ACTIONS = {
     1 => :list_books,
