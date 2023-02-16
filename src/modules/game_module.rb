@@ -16,8 +16,8 @@ module GameModule
   end
 
   def add_a_game
-    puts "Please type the word 'multiplayer': "
-    multiplayer = gets.chomp == 'multiplayer'
+    puts 'Is it a multiplayer game? [Y/N]: '
+    multiplayer = gets.chomp.to_s.downcase == 'y'
 
     puts 'Please write publish date for game [Enter date in format (yyyy-mm-dd)]'
     publish_date = gets.chomp
