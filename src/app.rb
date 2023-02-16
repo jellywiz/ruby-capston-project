@@ -54,6 +54,7 @@ class App
     puts '0 - Exit'
   end
 
+  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   def run
     loop do
       show_interactive_console
@@ -69,6 +70,7 @@ class App
         Storage.save_data('books', @books) unless @books.empty?
         break
       end
+  # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 
       if option
         send(option)
