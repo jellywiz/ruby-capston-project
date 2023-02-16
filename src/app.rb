@@ -15,8 +15,8 @@ class App
   def initialize
     @games = Storage.load_data('games')
     @authors = Storage.load_data('authors')
-    @labels = []
-    @books = []
+    @labels = Storage.load_data('labels')
+    @books = Storage.load_data('books')
     @music_albums = Storage.load_data('music_albums')
     @genres = Storage.load_data('genres')
   end
@@ -65,6 +65,8 @@ class App
         Storage.save_data('genres', @genres) unless @genres.empty?
         Storage.save_data('games', @games) unless @games.empty?
         Storage.save_data('authors', @authors) unless @authors.empty?
+        Storage.save_data('labels', @labels) unless @labels.empty?
+        Storage.save_data('books', @books) unless @books.empty?
         break
       end
 
