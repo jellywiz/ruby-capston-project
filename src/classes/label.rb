@@ -2,7 +2,7 @@ class Label
   attr_accessor :id, :title, :color, :items
 
   def initialize(title, color)
-    @id = rand(1000...1)
+    @id = Random.rand(1..1000)
     @title = title
     @color = color
     @items = []
@@ -24,6 +24,9 @@ class Label
   end
 
   def self.json_create(object)
-    new(object['title'], object['color'])
+    label = new(object['title'], object['color'])
+    label.id = object['id']
+    label.items = object['items']
+    label
   end
 end

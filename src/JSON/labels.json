@@ -1,1 +1,50 @@
-[{"json_class":"Label","id":null,"title":"e","color":"e","items":[{"json_class":"Book","publish_date":"2222","publisher":"w","cover_state":"w"}]}]
+[
+  {
+    "json_class": "Label",
+    "id": 547,
+    "title": "qqqq",
+    "color": "qqqq",
+    "items": [
+      {
+        "json_class": "Book",
+        "publish_date": "1234",
+        "publisher": "qq",
+        "cover_state": "ww"
+      }
+    ]
+  },
+  {
+    "json_class": "Label",
+    "id": 616,
+    "title": "qwe",
+    "color": "qwe",
+    "items": [
+      {
+        "json_class": "Book",
+        "publish_date": "1234",
+        "publisher": "werew",
+        "cover_state": "ere"
+      },
+      {
+        "json_class": "Book",
+        "publish_date": "1111",
+        "publisher": "qwe",
+        "cover_state": "qwe"
+      }
+    ]
+  },
+  {
+    "json_class": "Label",
+    "id": 340,
+    "title": "wertre",
+    "color": "wrwe",
+    "items": [
+      {
+        "json_class": "Book",
+        "publish_date": "333",
+        "publisher": "wew",
+        "cover_state": "wew"
+      }
+    ]
+  }
+]
