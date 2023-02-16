@@ -29,8 +29,7 @@ class App
     6 => :list_all_authors,
     7 => :add_a_book,
     8 => :add_a_music_album,
-    9 => :add_a_movie,
-    10 => :add_a_game,
+    9 => :add_a_game,
     0 => :exit
   }.freeze
 
@@ -45,8 +44,7 @@ class App
     puts '6. List all authors'
     puts '7. Add a book'
     puts '8. Add a music album'
-    puts '9. Add a movie'
-    puts '10. Add a game'
+    puts '9. Add a game'
     puts '0 - Exit'
   end
 
