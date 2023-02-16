@@ -9,7 +9,7 @@ module BookModule
 
   def add_a_book
     puts 'Adding a book'
-    puts 'Enter the publication date of the book'
+    puts 'Enter the publication date of the book [Enter date in format (yyyy-mm-dd)]'
     publication_date = gets.chomp
     puts 'Enter the publisher of the book'
     publisher = gets.chomp
@@ -36,6 +36,7 @@ module BookModule
       new_label = Label.new(label_title, label_color)
       @labels << new_label
       new_book.add_label(new_label)
+      puts 'Label added successfully'
     end
   end
 

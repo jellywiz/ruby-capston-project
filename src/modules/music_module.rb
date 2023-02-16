@@ -8,7 +8,7 @@ module MusicModule
   def add_a_music_album
     print 'Is it on spotify? [y/n] : '
     on_spotify = gets.chomp.to_s.downcase == 'y'
-    print 'Please enter the published date : '
+    print 'Please enter the published date [Enter date in format (yyyy-mm-dd)] : '
     published_date = gets.chomp.to_s
 
     music_album = MusicAlbum.new(on_spotify, published_date)
