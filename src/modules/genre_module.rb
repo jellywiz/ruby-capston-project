@@ -16,7 +16,11 @@ module GenreModule
     list_all_genres
     print "\nPlease select a genre by typing the corresponding number : "
     genre_input = gets.chomp.to_i
-    @genres[genre_input.to_i - 1]
+    if genre_input > @genres.length
+      print 'Please type correct number of genre'
+      genre_input = gets.chomp.to_i
+    end
+    @genres[genre_input - 1]
   end
 
   def create_genre

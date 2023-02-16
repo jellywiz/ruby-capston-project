@@ -5,7 +5,7 @@ module AuthorModule
     puts 'There are no authors yet, please add an author(s)!' if @authors.empty?
     puts 'Authors:'
     @authors.each_with_index do |author, index|
-      puts "[Author #{index + 1}]. First Name : #{author.first_name}, Last Name : #{author.last_name} "
+      puts "#{index + 1}. First Name : #{author.first_name}, Last Name : #{author.last_name} "
     end
   end
 
@@ -13,6 +13,10 @@ module AuthorModule
     list_all_authors
     print "\nPlease select an author by typing the corresponding number : "
     author_input = gets.chomp.to_i
+    if author_input > @authors.length
+      print 'Please type correct number of author : '
+      author_input = gets.chomp.to_i
+    end
     @authors[author_input.to_i - 1]
   end
 
