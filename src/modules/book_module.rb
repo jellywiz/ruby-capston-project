@@ -19,16 +19,15 @@ module BookModule
     @books << new_book
 
     add_list('labels')
-    list_labels
     select_options('label')
 
     label_option = gets.chomp.to_i
+    # list all labels if 1 is selected
     if label_option == 1
-      print 'Enter id of the label: '
-      id_label = gets.chomp.to_i
-      @labels.each do |label|
-        new_book.add_label(label) if label.id == id_label
-      end
+      list_labels
+      puts 'Select a label'
+      label_option = gets.chomp.to_i
+      new_book.add_label(@labels[label_option - 1])
     else
       puts 'Enter the title of the label'
       label_title = gets.chomp
