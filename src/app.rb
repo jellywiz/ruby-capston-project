@@ -70,7 +70,7 @@ class App
         Storage.save_data('books', @books) unless @books.empty?
         break
       end
-  # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+      # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 
       if option
         send(option)
