@@ -1,1 +1,1 @@
-[]
+[{"json_class":"MusicAlbum","on_spotify":true,"publish_date":"2023-07-05","genre":{"json_class":"Genre","name":"Comedy"}},{"json_class":"MusicAlbum","on_spotify":false,"publish_date":"2023-04-02","genre":{"json_class":"Genre","name":"Comedy"}},{"json_class":"MusicAlbum","on_spotify":true,"publish_date":"2023-05-03","genre":{"json_class":"Genre","name":"Thriller"}},{"json_class":"MusicAlbum","on_spotify":false,"publish_date":"2023-06-04","genre":{"json_class":"Genre","name":"Thriller"}}]
