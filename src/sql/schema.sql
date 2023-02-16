@@ -6,7 +6,7 @@ CREATE TABLE item (
   label VARCHAR(255),
   publish_date DATE,
   archived BOOLEAN
-)
+);
 
 CREATE TABLE genre(
   id SERIAL PRIMARY KEY,
@@ -18,7 +18,23 @@ CREATE TABLE music_album (
   on_spotify BOOLEAN,
   publish_date DATE,
   genre_id INT REFERENCES genre(id),
-)
+);
+
+-- Create Games Table
+CREATE TABLE games (
+  id INT,
+  multiplayer BOOLEAN,
+  last_played_at DATE,
+  FOREIGN KEY(id) REFERENCES item(id)
+);
+
+-- Create Authors Table
+CREATE TABLE authors (
+  id  INT GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  PRIMARY KEY(id)
+);
 
 CREATE TABLE books(
   id SERIAL PRIMARY KEY,

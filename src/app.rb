@@ -13,8 +13,8 @@ class App
   include AuthorModule
   include BookModule
   def initialize
-    @games = []
-    @authors = []
+    @games = Storage.load_data('games')
+    @authors = Storage.load_data('authors')
     @labels = Storage.load_data('labels')
     @books = Storage.load_data('books')
     @music_albums = Storage.load_data('music_albums')
@@ -54,6 +54,7 @@ class App
     puts '0 - Exit'
   end
 
+  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   def run
     loop do
       show_interactive_console
@@ -63,10 +64,13 @@ class App
         puts 'Thank you for using the app!'
         Storage.save_data('music_albums', @music_albums) unless @music_albums.empty?
         Storage.save_data('genres', @genres) unless @genres.empty?
+        Storage.save_data('games', @games) unless @games.empty?
+        Storage.save_data('authors', @authors) unless @authors.empty?
         Storage.save_data('labels', @labels) unless @labels.empty?
         Storage.save_data('books', @books) unless @books.empty?
         break
       end
+      # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 
       if option
         send(option)
