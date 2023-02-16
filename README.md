@@ -11,6 +11,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [Video Presentation](#video-presentation)
     - [Getting Started ](#getting-started-)
     - [Prerequisites](#prerequisites)
     - [Usage](#usage)
@@ -41,25 +42,21 @@
 
 - **List all books.**
 - **List all music albums.**
-- **List all movies.**
 - **List all genres.**
 - **List all labels.**
 - **List all authors.**
 - **Add a book.**
 - **Add a music album.**
-- **Add a movie.**
 - **Preserve data in JSON files**
 - **Database for the app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO
+### 🚀 Video Presentation  <a name="video-presentation"></a>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+[Link to video presentation](https://youtu.be/6tDOi-4nnu8)
 
-- [updated upon project completion.]()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
 <!-- GETTING STARTED -->
 
